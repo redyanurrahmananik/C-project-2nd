@@ -114,6 +114,12 @@
     <Compile Include="HR\View Order.Designer.cs">
       <DependentUpon>View Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee\Update Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Update Profile.Designer.cs">
+      <DependentUpon>Update Profile.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Client\Client Dash.resx">
       <DependentUpon>Client Dash.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,12 +152,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="HR\Register employee.resx">
       <DependentUpon>Register employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HR\View Order.resx">
       <DependentUpon>View Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Update Profile.resx">
+      <DependentUpon>Update Profile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
