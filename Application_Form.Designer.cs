@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.bBack = new System.Windows.Forms.Button();
             this.bSubmit = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.rtbAppBox = new System.Windows.Forms.RichTextBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,14 +43,14 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(101, 258);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 27);
-            this.textBox2.TabIndex = 20;
+            this.txtName.BackColor = System.Drawing.SystemColors.Info;
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(101, 258);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(300, 27);
+            this.txtName.TabIndex = 20;
             // 
             // bBack
             // 
@@ -74,6 +74,7 @@
             this.bSubmit.TabIndex = 18;
             this.bSubmit.Text = "Submit";
             this.bSubmit.UseVisualStyleBackColor = false;
+            this.bSubmit.Click += new System.EventHandler(this.bSubmit_Click);
             // 
             // label4
             // 
@@ -86,32 +87,33 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Application Box";
             // 
-            // richTextBox1
+            // rtbAppBox
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Silver;
-            this.richTextBox1.Location = new System.Drawing.Point(422, 138);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(659, 431);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.rtbAppBox.BackColor = System.Drawing.Color.Silver;
+            this.rtbAppBox.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbAppBox.Location = new System.Drawing.Point(422, 138);
+            this.rtbAppBox.Name = "rtbAppBox";
+            this.rtbAppBox.Size = new System.Drawing.Size(659, 431);
+            this.rtbAppBox.TabIndex = 16;
+            this.rtbAppBox.Text = "";
             // 
-            // dateTimePicker1
+            // dtpDate
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Bisque;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(101, 353);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(300, 27);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dtpDate.CalendarMonthBackground = System.Drawing.Color.Bisque;
+            this.dtpDate.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Location = new System.Drawing.Point(101, 353);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(300, 27);
+            this.dtpDate.TabIndex = 15;
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(101, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(300, 27);
-            this.textBox1.TabIndex = 14;
+            this.txtId.BackColor = System.Drawing.SystemColors.Info;
+            this.txtId.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(101, 147);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(300, 27);
+            this.txtId.TabIndex = 14;
             // 
             // label3
             // 
@@ -172,13 +174,13 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1105, 682);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.bBack);
             this.Controls.Add(this.bSubmit);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.rtbAppBox);
+            this.Controls.Add(this.dtpDate);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -195,13 +197,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button bBack;
         private System.Windows.Forms.Button bSubmit;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox rtbAppBox;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
