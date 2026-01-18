@@ -67,5 +67,10 @@ namespace C__project.HR
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,8 +9,8 @@ namespace C__project
 {
     public partial class Hr_Dash : Form
     {
-        // keep a single instance so multiple clicks don't open multiple forms
-        private Register_employee _regForm;
+        
+        
 
         // guard to prevent re-entrancy when logging out
         private bool _logoutInProgress;
@@ -193,14 +193,6 @@ namespace C__project
 
                 if (confirm == DialogResult.Yes)
                 {
-                    // Close any child windows owned by the dashboard to avoid orphan windows
-                    try
-                    {
-                        if (_regForm != null && !_regForm.IsDisposed)
-                            _regForm.FormClosed -= null; // no-op safe detach intent
-                    }
-                    catch { /* ignore cleanup errors */ }
-
                     // Try to find an existing Log_in form (reuse) to avoid creating multiples
                     var existingLogin = Application.OpenForms.OfType<Log_in>().FirstOrDefault();
                     if (existingLogin != null)
@@ -227,6 +219,7 @@ namespace C__project
                     _logoutInProgress = false;
                 }
             }
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -247,7 +240,7 @@ namespace C__project
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-
+            LoadControlInPanel(new SalaryBonus());
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -257,5 +250,9 @@ namespace C__project
 
         }
 
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

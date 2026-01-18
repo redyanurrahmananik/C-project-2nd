@@ -16,6 +16,7 @@ namespace C__project.HR
         {
             InitializeComponent();
         }
+        // created by nafis
 
         private void button1_MouseEnter(object sender, EventArgs e)
         {
@@ -60,6 +61,16 @@ namespace C__project.HR
         {
             button2.BackColor = Color.FromArgb(95, 168, 211); ;
             pictureBox1.BackColor = Color.FromArgb(95, 168, 211);
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NoticeBoard_Load(object sender, EventArgs e)
+        {
+
         }
     }
     
