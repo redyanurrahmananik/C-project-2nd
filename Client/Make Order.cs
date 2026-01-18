@@ -153,5 +153,17 @@ namespace C__project.Client
             comboBox2.SelectedIndex = -1;
             dateTimePicker1.Value = DateTime.Now;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Client_Dash client_Dash = new Client_Dash();
+            client_Dash.Show();
+            this.Hide();
+        }
+
+        private void Make_Order_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
