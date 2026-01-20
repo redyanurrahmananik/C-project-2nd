@@ -1,4 +1,4 @@
-﻿using C__project.HR;
+using C__project.HR;
 using C__project.LogIn;
 using System;
 using System.Collections.Generic;
@@ -119,5 +119,7 @@ namespace C__project
         {
             LoadControl(new SignIn());
         }
+
+        
     }
 }
