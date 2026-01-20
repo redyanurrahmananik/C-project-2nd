@@ -189,6 +189,7 @@ namespace C__project.Client
         private void Make_Order_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+
         }
     }
 }

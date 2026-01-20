@@ -49,11 +49,7 @@ namespace C__project.HR
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void button2_MouseEnter(object sender, EventArgs e)
         {
             button2.BackColor = Color.MediumSpringGreen;
@@ -71,8 +67,18 @@ namespace C__project.HR
         {
 
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void NoticeBoard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

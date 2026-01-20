@@ -59,5 +59,10 @@ namespace C__project.Client
         {
             // Optional: Handle cell clicks if needed
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

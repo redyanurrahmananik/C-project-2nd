@@ -57,6 +57,7 @@ namespace C__project
             Log_in log_In = new Log_in();
             log_In.Show();
             this.Hide();
+
         }
     }
 }
