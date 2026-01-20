@@ -153,5 +153,10 @@ namespace C__project.Client
             comboBox2.SelectedIndex = -1;
             dateTimePicker1.Value = DateTime.Now;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

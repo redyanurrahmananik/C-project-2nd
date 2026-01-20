@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace C__project
+namespace C__project.Employee
 {
-    public partial class Notice_Board : Form
+    public partial class Update_Profile : Form
     {
-        public Notice_Board()
+        public Update_Profile()
         {
             InitializeComponent();
         }
@@ -20,6 +20,13 @@ namespace C__project
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Employee_Dash employeeDash = new Employee_Dash();
+            employeeDash.Show();
+            this.Hide();
         }
     }
 }
