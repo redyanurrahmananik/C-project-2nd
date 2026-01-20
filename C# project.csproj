@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>C__project</RootNamespace>
     <AssemblyName>C# project</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -27,9 +27,10 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -47,9 +48,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=10.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.10.0.2\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -117,6 +125,12 @@
     <Compile Include="HR\EmpApplication.Designer.cs">
       <DependentUpon>EmpApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="HR\EmpDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HR\EmpDetails.Designer.cs">
+      <DependentUpon>EmpDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="HR\Hr Dash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +161,12 @@
     <Compile Include="HR\SalaryBonus.Designer.cs">
       <DependentUpon>SalaryBonus.cs</DependentUpon>
     </Compile>
+    <Compile Include="HR\welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HR\welcome.Designer.cs">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Log in.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +196,9 @@
     <EmbeddedResource Include="Client\Billing.resx">
       <DependentUpon>Billing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Client\Billings.resx">
+      <DependentUpon>Billings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Client\Client Dash.resx">
       <DependentUpon>Client Dash.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +220,9 @@
     <EmbeddedResource Include="HR\EmpApplication.resx">
       <DependentUpon>EmpApplication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HR\EmpDetails.resx">
+      <DependentUpon>EmpDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HR\Hr Dash.resx">
       <DependentUpon>Hr Dash.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HR\SalaryBonus.resx">
       <DependentUpon>SalaryBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\welcome.resx">
+      <DependentUpon>welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Log in.resx">
       <DependentUpon>Log in.cs</DependentUpon>
@@ -232,7 +261,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

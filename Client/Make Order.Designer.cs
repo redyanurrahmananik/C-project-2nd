@@ -235,6 +235,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Make_Order";
             this.Text = "Make_Order";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Make_Order_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

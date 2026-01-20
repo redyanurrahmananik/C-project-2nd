@@ -16,6 +16,15 @@ namespace C__project
         {
             InitializeComponent();
         }
+       /* private void LoadControlInPanel(UserControl control)
+        {
+            panel1.Controls.Clear();        // Clear old content
+            control.Dock = DockStyle.Fill;  // Fill the panel
+            panel1.Controls.Add(control);   // Add the control
+            control.BringToFront();         // Make sure it's visible
+        }
+       */
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -45,6 +54,9 @@ namespace C__project
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Log_in log_In = new Log_in();
+            log_In.Show();
+            this.Hide();
 
         }
     }
