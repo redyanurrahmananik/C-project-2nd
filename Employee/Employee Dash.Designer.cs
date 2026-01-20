@@ -1,4 +1,4 @@
-﻿namespace C__project
+namespace C__project
 {
     partial class Employee_Dash
     {
@@ -51,6 +51,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Create an Application";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -63,12 +64,13 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(562, 402);
+            this.button4.Location = new System.Drawing.Point(554, 387);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(83, 38);
             this.button4.TabIndex = 3;
             this.button4.Text = "Log Out";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Employee_Dash
             // 
