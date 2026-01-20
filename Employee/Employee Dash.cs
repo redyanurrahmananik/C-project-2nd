@@ -16,5 +16,10 @@ namespace C__project
         {
             InitializeComponent();
         }
+
+        private void noticeboardBtn_Click(object sender, EventArgs e)
+        {
+            Notice_Board nb = new Notice_Board();
+        }
     }
 }
