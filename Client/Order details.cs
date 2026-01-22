@@ -24,14 +24,23 @@ namespace C__project.Client
         {
             try
             {
-                string query = @"SELECT 
-                                    [Client Id],
-                                    [Order item], 
-                                    [Quantity],
-                                    [Quality],
-                                    [Deadline],
-                                    [Total price]
-                                FROM [office management studio].[dbo].[Make Order]";
+                string query = $@"
+                    SELECT
+                        OrderId,
+                        OrderItem      AS [Item],
+                        Quality,
+                        Quantity,
+                        PricePerUnit   AS [Unit Price],
+                        TotalPrice     AS [Total],
+                        Deadline,
+                        OrderDate,
+                        Status,
+                        Payable,
+                        Payment,
+                        PaymentDate
+                    FROM Orders
+                    WHERE UserId = '{Session.UserId}'
+                    ORDER BY OrderDate DESC";
 
                 DataTable orderData = dataAccess.ExecuteQueryTable(query);
                 dataGridView1.DataSource = orderData;
