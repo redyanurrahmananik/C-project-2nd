@@ -55,15 +55,15 @@ namespace C__project.LogIn
                 Session.IsEmployee = Convert.ToBoolean(dt.Rows[0]["IsEmployee"]);
 
                 // ✅ Open correct dashboard
-                if (Session.IsEmployee)
+                  if (Session.IsEmployee)
                 {
                     new Employee_Dash().Show();
                 }
-                // ✅ HR (only HR himself)
-                else if (Session.CreatedBy == "HR")
+                else if(Session.CreatedBy == "HR")
                 {
                     new Hr_Dash().Show();
                 }
+               
                 else
                 {
                     new Client_Dash().Show();
